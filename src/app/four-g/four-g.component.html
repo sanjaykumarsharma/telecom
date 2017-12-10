@@ -1,0 +1,23 @@
+<div class="row align-items-center bg-faded p-2 my-2" *ngFor="let p of posts">
+    <div class="col-12">
+        <hr class="divider">
+        <h2 class="text-center text-lg text-uppercase my-0">
+            <strong>{{p.title}}</strong>
+        </h2>
+        <hr class="divider">
+    </div>
+
+    <div class="col-12">
+        <div class="col-12">
+            <p>
+                <span [innerHTML]="p.description"></span></p>
+        </div>
+    </div>
+
+</div>
+
+<div class="row justify-content-md-center">
+    <div class="col-md-auto">
+        <ngb-pagination [collectionSize]="50" [(page)]="page" aria-label="Default pagination" (click)="PostSNavigation()"></ngb-pagination><br>
+    </div>
+</div>
